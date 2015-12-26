@@ -38,6 +38,15 @@
 		}
 	}
 
+	function guessRepeat(num){
+		for(i=0;i<guessArr.length-1;i++){
+			if(num === guessArr[i]){
+				return true;	
+			}
+		}
+		return false;
+	}
+
 	
 	// Check if the Player's Guess is the winning number 
 
@@ -46,7 +55,10 @@
 			$('#guessCount').text("Congratulation! You Won!");
 			$('#win').css("display", "block");
 			hideStuff();	
-		} else if (guessArr.length != maxGuess){
+		} else if(guessRepeat(playerGuess) === true){
+			$('#guessCount').text("You submitted a duplicate, guess again")
+			guessArr.pop();
+		}else if (guessArr.length != maxGuess){
 			$('#guessCount').text("You have " + (maxGuess - guessArr.length) + " guesses remaining");	
 			guessMessage();
 		} else{
@@ -63,6 +75,7 @@
 		$('#guess').hide();
 		$('#hint').hide();
 		$("#hintHelp").hide();	
+		$("#main").hide();
 	}	
 
 
