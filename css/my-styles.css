@@ -22,6 +22,19 @@ h2, h3 {
 	margin-bottom: 16px;
 	margin-top: 0;
 }
+
+h4 {
+
+	color: #5f5d60;
+	margin-bottom: 16px;
+	margin-top: 0;
+}
+
+#lose, #win{
+	display: none;
+	margin: auto;
+}
+
 p {
 	color: #b3aeb5;
 	line-height: 1.7;

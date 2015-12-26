@@ -19,16 +19,22 @@
       
       <div class="jumbotron">
         <h2>Please Enter A Number</h2>
-        <p class="input-group-addon">
-            <input type="text" class="form-control" placeholder="1-100" aria-describedby="basic-addon1">
+        <img id="lose" src="img/lose.gif" width="320">
+        <img id="win" src="img/win.gif" width="320">
+        <h4 id="guessCount"> You have 5 guesses remaining </h3>
+        <p class="input-group-center" >
+            <input type="text" id="value" class="form-control" placeholder="1-100">
+        </p> 
+
+        <h4 id="lowOrhigh"></h3>
+        <p class="btn">
+          <a class="btn btn-success btn-lg" href="#" id="guess">Guess</a>
         </p>
         <p class="btn">
-          <a class="btn btn-success btn-lg" href="#">Guess</a>
+          <a class="btn btn-success btn-lg" href="#" id="restart">Restart</a>
+          <a class="btn btn-success btn-lg" href="#" id="hint">Hint</a>
         </p>
-        <p class="btn">
-          <a class="btn btn-success btn-lg" href="#">Restart</a>
-          <a class="btn btn-success btn-lg" href="#" >Quit</a>
-        </p>
+        <h4 id ="hintHelp"></h4>
       </div>
 
 
@@ -54,5 +60,9 @@
         <p>&copy; 2015 Guessing Game - By Jai Prasad</p>
       </div>
     </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/guessingGame.js"></script>
   </body>
 </html>
+
+
